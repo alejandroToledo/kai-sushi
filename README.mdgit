@@ -1,1 +1,0 @@
-"# kai-sushi"  initgit add README.mdgit commit -m "base proyecto local sushi"git branch -M maingit remote add origin https://github.com/alejandroToledo/kai-sushi.gitgit push -u origin main
