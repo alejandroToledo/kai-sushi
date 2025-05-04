@@ -6,6 +6,7 @@
   --background-end-rgb: 0, 0, 0;
   --primary-color: #E14735;
   --secondary-color: #ffffff;
+  --spacing-unit: 1rem;
 }
 
 body {
@@ -18,34 +19,39 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
 /* Estilos personalizados */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--spacing-unit);
 }
 
-/* Animaciones suaves para los enlaces */
-a {
+/* Animaciones y transiciones */
+a, button {
   transition: all 0.3s ease;
 }
 
 /* Estilos para el scroll suave */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 /* Estilos para las imágenes */
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* Estilos para las tarjetas del menú */
 .menu-card {
   transition: transform 0.3s ease;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .menu-card:hover {
@@ -57,4 +63,51 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+/* Espaciado consistente */
+section {
+  padding: calc(var(--spacing-unit) * 5) 0;
+}
+
+/* Accesibilidad */
+:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Formularios */
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border-radius: 0.25rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section {
+    padding: calc(var(--spacing-unit) * 3) 0;
+  }
+  
+  .container {
+    padding: 0 calc(var(--spacing-unit) * 1.5);
+  }
 }
