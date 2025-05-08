@@ -4,7 +4,7 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
-  --primary-color: #E14735;
+  --primary-color: #ff5757;
   --secondary-color: #ffffff;
   --spacing-unit: 1rem;
 }
@@ -16,7 +16,7 @@ body {
     rgb(var(--background-start-rgb)),
     rgb(var(--background-end-rgb))
   );
-  font-family: 'Inter', sans-serif;
+  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
@@ -60,7 +60,7 @@ img {
 
 /* Tipografía */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
+  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -69,11 +69,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
 h2 { font-size: clamp(2rem, 4vw, 3rem); }
 h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
-
-/* Espaciado consistente */
-section {
-  padding: calc(var(--spacing-unit) * 5) 0;
-}
 
 /* Accesibilidad */
 :focus {
@@ -103,9 +98,7 @@ input:focus, textarea:focus {
 
 /* Responsive */
 @media (max-width: 768px) {
-  section {
-    padding: calc(var(--spacing-unit) * 3) 0;
-  }
+ 
   
   .container {
     padding: 0 calc(var(--spacing-unit) * 1.5);

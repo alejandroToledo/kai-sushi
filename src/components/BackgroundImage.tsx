@@ -22,7 +22,7 @@ export default function BackgroundImage({
           className="object-cover"
           priority
         />
-        <div className={`absolute inset-0 bg-black/[${opacity}]`}></div>
+        <div className={`absolute inset-0  /[${opacity}]`}></div>
       </div>
       {/* Contenido */}
       <div className="relative z-10">

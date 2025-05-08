@@ -18,9 +18,9 @@ export default function Button({
   const baseStyles = "px-6 py-2 transition-all duration-200";
   
   const variants = {
-    primary: "border border-[#E14735] text-[#E14735] hover:bg-[#E14735] hover:text-white",
-    secondary: "border border-white text-white hover:bg-white hover:text-[#E14735]",
-    terciary: "border border-[#E14735] text-white bg-[#E14735] ",
+    primary: "border border-[#ff5757] text-[#ff5757] hover:bg-[#ff5757] hover:text-white",
+    secondary: "border border-white text-white hover:bg-white hover:text-[#ff5757]",
+    terciary: "border border-[#ff5757] text-white bg-[#ff5757] ",
     disabled: "border border-gray-400 text-gray-400 cursor-not-allowed"
   };
 

@@ -4,27 +4,26 @@ import { useState } from "react";
 import Link from "next/link";
 import BackgroundImage from "./BackgroundImage";
 import Button from "./ui/Button";
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Hero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <section id="inicio" className="h-screen relative">
-      <BackgroundImage opacity={0.5} className="h-full bg-black bg-opacity-70">
+      <BackgroundImage opacity={0.1} className="h-full bg-opacity-70">
         {/* Overlay decorativo */}
-        <div className="absolute inset-0 bg-black/60 z-0" />
+        <div className="absolute inset-0 bg-black/70 z-0" />
 
         {/* Header */}
         <nav className="relative z-10 mx-auto max-w-7xl py-6 flex justify-between items-center px-4">
-          <div className="flex items-center gap-2 text-white text-2xl font-semibold tracking-widest">
+          <div className="flex items-center text-white font-semibold tracking-widest">
             <Image
               src="/images/hero/logo-kai.png"
               alt="Kai Logo"
-              width={64}
-              height={64}
+              width={160}
+              height={160}
             />
-            KAI SUSHI
           </div>
 
           <div className="hidden md:flex space-x-8">
@@ -32,17 +31,19 @@ export default function Hero() {
               <Link
                 key={item}
                 href={`#${item}`}
-                className="text-white hover:text-[#E14735] transition-colors capitalize"
+                className="text-white transition-all capitalize border-b-2 border-transparent hover:border-[#ff5757]"
               >
                 {item}
               </Link>
             ))}
           </div>
+
           <div className="hidden md:block">
             <Button href="#menu" variant="primary">
               Pedir Online
             </Button>
           </div>
+
           <button
             className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -71,7 +72,7 @@ export default function Hero() {
                 <Link
                   key={item}
                   href={`#${item}`}
-                  className="text-white hover:text-[#E14735] transition-colors capitalize"
+                  className="text-white transition-all capitalize border-b-2 border-transparent hover:border-[#ff5757]"
                 >
                   {item}
                 </Link>
@@ -84,15 +85,15 @@ export default function Hero() {
         )}
 
         {/* Hero Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center h-[calc(100vh-7rem)] flex flex-col justify-center items-center">
+        <div className="relative z-10 container mx-auto px-4 text-center h-[calc(100vh-6rem)] flex flex-col justify-center items-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white tracking-wider mb-6">
-            Auténtico Sushi Artesanal
+            Sushi con alma japonesa y corazón argentino
           </h1>
           <p className="text-xl text-white font-light mb-8 max-w-2xl">
             Experiencia culinaria japonesa en su máxima expresión
           </p>
-          <Button href="#menu" variant="terciary">
-            Ver Menú
+          <Button href="/menu.pdf" variant="terciary">
+            Reservar
           </Button>
         </div>
       </BackgroundImage>
