@@ -66,21 +66,33 @@ export default function Hero() {
 
         {/* Menú móvil */}
         {isMenuOpen && (
-          <div className="md:hidden bg-black/95 z-20 relative">
-            <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-              {["menu", "nosotros", "contacto"].map((item) => (
-                <Link
-                  key={item}
-                  href={`#${item}`}
-                  className="text-white transition-all capitalize border-b-2 border-transparent hover:border-[#ff5757]"
-                >
-                  {item}
-                </Link>
-              ))}
-              <Button href="#menu" variant="primary">
-                Pedir Online
-              </Button>
-            </div>
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex flex-col justify-center items-center space-y-6">
+            {/* Botón cerrar */}
+            <button
+              className="absolute top-6 right-6 text-white text-3xl"
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Cerrar menú"
+            >
+              &times;
+            </button>
+
+            {/* Ítems del menú */}
+            {["menu", "nosotros", "contacto"].map((item) => (
+              <Link
+                key={item}
+                href={`#${item}`}
+                onClick={() => setIsMenuOpen(false)} // cerrar al hacer clic
+                className="text-white text-2xl tracking-wide border-b-2 border-transparent hover:border-[#ff5757] transition-all capitalize"
+              >
+                {item}
+              </Link>
+            ))}
+
+            {/* Botón final */}
+
+            <Button href="/menu.pdf" variant="terciary">
+              Ver menú
+            </Button>
           </div>
         )}
 
@@ -93,7 +105,7 @@ export default function Hero() {
             Experiencia culinaria japonesa en su máxima expresión
           </p>
           <Button href="/menu.pdf" variant="terciary">
-            Reservar
+            Ver menú
           </Button>
         </div>
       </BackgroundImage>
