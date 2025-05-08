@@ -17,8 +17,8 @@ export default function About() {
         alt="Koi izquierdo"
         width={200}
         height={200}
-        className="absolute bottom-0 left-0  pointer-events-none z-0 hidden md:block"
-      />
+        className="absolute bottom-0 left-0 pointer-events-none z-0 opacity-30 md:opacity-100"
+        />
 
       {/* Contenido principal */}
       <div className="relative z-10">

@@ -3,7 +3,7 @@ import Image from "next/image";
 const galleryImages = [
   { src: "/images/hero/sushi-background.jpg", alt: "Sushi Background" },
   { src: "/images/about/about-sushi.jpg", alt: "About Sushi" },
-  { src: "/images/contact/sushi-preparation.jpeg", alt: "Sushi Preparation" },
+  { src: "/images/contact/sushi-preparation.jpg", alt: "Sushi Preparation" },
   { src: "/images/contact/sushi-presentation.jpeg", alt: "Sushi Presentation" },
 ];
 

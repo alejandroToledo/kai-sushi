@@ -26,7 +26,7 @@ export default function Contact() {
             alt="Koi derecho"
             width={200}
             height={200}
-            className="absolute top-0 right-0 pointer-events-none z-0 hidden md:block"
+            className="absolute top-0 right-0 pointer-events-none z-0 hidden md:block opacity-30 md:opacity-100"
           />
           {/* Sección Izquierda - Formulario */}
           <div className=" bg-[#121212] p-8 rounded-lg z-30">
@@ -100,7 +100,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="text-lg hover:text-[#ff5757] transition-colors"
                   >
-                    @kaisushi.caba
+                    Síguenos en Instagram!
                   </a>
                 </div>
               </div>
