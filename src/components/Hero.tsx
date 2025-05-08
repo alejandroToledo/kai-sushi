@@ -27,7 +27,7 @@ export default function Hero() {
           </div>
 
           <div className="hidden md:flex space-x-8">
-            {["menu", "nosotros", "contacto"].map((item) => (
+            {["nosotros", "galería", "contacto"].map((item) => (
               <Link
                 key={item}
                 href={`#${item}`}
@@ -39,7 +39,7 @@ export default function Hero() {
           </div>
 
           <div className="hidden md:block">
-            <Button href="#menu" variant="primary">
+            <Button href="https://wa.me/5491169549498" variant="terciary">
               Pedir Online
             </Button>
           </div>
@@ -66,7 +66,7 @@ export default function Hero() {
 
         {/* Menú móvil */}
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex flex-col justify-center items-center space-y-6">
+          <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex flex-col justify-center items-center space-y-6 px-6">
             {/* Botón cerrar */}
             <button
               className="absolute top-6 right-6 text-white text-3xl"
@@ -77,19 +77,18 @@ export default function Hero() {
             </button>
 
             {/* Ítems del menú */}
-            {["menu", "nosotros", "contacto"].map((item) => (
+            {["nosotros", "galería", "contacto"].map((item) => (
               <Link
                 key={item}
                 href={`#${item}`}
-                onClick={() => setIsMenuOpen(false)} // cerrar al hacer clic
-                className="text-white text-2xl tracking-wide border-b-2 border-transparent hover:border-[#ff5757] transition-all capitalize"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-white text-lg border-b-2 border-transparent hover:border-[#ff5757] transition-all capitalize"
               >
                 {item}
               </Link>
             ))}
 
-            {/* Botón final */}
-
+            {/* Botón PDF */}
             <Button href="/menu.pdf" variant="terciary">
               Ver menú
             </Button>
@@ -104,9 +103,11 @@ export default function Hero() {
           <p className="text-xl text-white font-light mb-8 max-w-2xl">
             Experiencia culinaria japonesa en su máxima expresión
           </p>
-          <Button href="/menu.pdf" variant="terciary">
-            Ver menú
-          </Button>
+
+          {/* Botón descarga PDF en desktop */}
+          <Button href="/menu.pdf" variant="primary">
+              Ver menú
+            </Button>
         </div>
       </BackgroundImage>
     </section>

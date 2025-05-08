@@ -12,25 +12,22 @@ export default function Home() {
     <main className="min-h-screen   text-white">
       <Hero />
       <About />
-      <section className="relative z-10">
-  {/* Galería */}
-  <Gallery />
+      <section className="relative">
+        {/* Sección Galería */}
+        <Gallery />
 
-  {/* Koi decorativo */}
-  <Image
-    src="/images/koi-right.png"
-    alt="Koi decorativo derecho"
-    width={250}
-    height={250}
-    className="hidden md:block absolute right-0 bottom-[40%] pointer-events-none z-0"
-  />
+        {/* Imagen del koi decorativo */}
+        <Image
+          src="/images/koi-right.png"
+          alt="Koi decorativo derecho"
+          width={300}
+          height={300}
+          className="absolute md:block absolute right-0 bottom-[40%] opacity-10 pointer-events-none z-10"
+        />
 
-  {/* Contacto */}
-  <div className="relative z-10">
-    <Contact />
-  </div>
-</section>
-
+        {/* Sección Contacto */}
+        <Contact />
+      </section>
     </main>
   );
 }
