@@ -95,7 +95,7 @@ export default function Contact() {
                     <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5A3.75 3.75 0 0116.25 20h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm8.5 1.5a.75.75 0 100 1.5.75.75 0 000-1.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z" />
                   </svg>
                   <a
-                    href="https://instagram.com/kai.sushi"
+                    href="https://instagram.com/kaisushi.caba"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg hover:text-[#ff5757] transition-colors"
